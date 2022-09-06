@@ -93,7 +93,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8091/adherence-service/v0/adherence/trial/{trial}/patient/{patient_id}/type/{sub_type}/time_scope/{time_scope}/date",
@@ -130,7 +129,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -177,7 +177,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -191,7 +190,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -260,7 +260,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8091/adherence-service/v0/adherence/trial/{trial}/patients/type/pill/time_scope/up_to_date",
@@ -294,7 +293,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -326,7 +326,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -340,7 +339,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -435,7 +435,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8081/event-service/v0/events/v1/trials/{trial}/patients/{patient_id}/action_types/take_medication/schedules/{schedule_id}/target_dates/{target_date}",
@@ -472,7 +471,8 @@
             "integration.request.path.target_date" : "method.request.path.target_date"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "post" : {
@@ -540,7 +540,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8081/event-service/v0/events/v1/trials/{trial}/patients/{patient_id}/action_types/take_medication/schedules/{schedule_id}/target_dates/{target_date}",
@@ -563,7 +562,8 @@
             "integration.request.path.target_date" : "method.request.path.target_date"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -610,7 +610,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -624,7 +623,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -757,7 +757,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8081/event-service/v0/events/v1/trials/{trial}/patients/{patient_id}/action_types/take_medication/schedules/{schedule_id}/target_dates/{target_date}/reclassifications",
@@ -801,7 +800,8 @@
             "integration.request.path.target_date" : "method.request.path.target_date"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -848,7 +848,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -862,7 +861,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -985,7 +985,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8082/schedule-service/v0/medications/create",
@@ -1025,7 +1024,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -1050,7 +1050,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -1064,7 +1063,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -1201,7 +1201,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8082/schedule-service/v0/medications/{medication_id}",
@@ -1250,7 +1249,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -1281,7 +1281,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -1295,7 +1294,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -1434,7 +1434,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/medications/trials/{trial}",
@@ -1487,7 +1486,8 @@
             "integration.request.querystring.check_reference" : "method.request.querystring.check_reference"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -1519,7 +1519,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -1533,7 +1532,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -1673,7 +1673,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/medications/{medication_id}",
@@ -1722,7 +1721,8 @@
             "integration.request.querystring.check_reference" : "method.request.querystring.check_reference"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -1863,7 +1863,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/medications/{medication_id}",
@@ -1912,7 +1911,8 @@
             "integration.request.querystring.msg_id" : "method.request.querystring.msg_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -1943,7 +1943,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -1957,7 +1956,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2030,7 +2030,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/patient-infos/list",
@@ -2061,7 +2060,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -2087,7 +2087,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -2101,7 +2100,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2214,7 +2214,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/patient-infos/remove/trials/{trial}/patients/{patient_id}",
@@ -2262,7 +2261,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -2299,7 +2299,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -2313,7 +2312,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2391,7 +2391,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8096/orchestration_services/v0/patient-infos/{patient-id}",
@@ -2425,7 +2424,8 @@
             "integration.request.path.patient-id" : "method.request.path.patient-id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -2457,7 +2457,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -2471,7 +2470,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2586,7 +2586,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type",
@@ -2632,7 +2631,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -2672,7 +2672,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "201",
@@ -2694,7 +2693,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2775,7 +2775,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/get-all",
@@ -2814,7 +2813,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -2840,7 +2840,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -2854,7 +2853,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -2941,7 +2941,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/trial/{trial}",
@@ -2983,7 +2982,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -3093,7 +3093,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/trial/{trial}",
@@ -3140,7 +3139,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -3200,7 +3200,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "200" : {
               "statusCode" : "200",
@@ -3214,7 +3213,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -3301,7 +3301,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/{id}",
@@ -3335,7 +3334,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -3453,7 +3453,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/{id}",
@@ -3500,7 +3499,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -3610,7 +3610,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/disease-type/{id}",
@@ -3657,7 +3656,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -3689,7 +3689,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -3703,7 +3702,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -3818,7 +3818,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency",
@@ -3864,7 +3863,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -3890,7 +3890,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -3904,7 +3903,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -3974,7 +3974,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency/trial/{trial}",
@@ -4008,7 +4007,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -4118,7 +4118,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency/trial/{trial}",
@@ -4165,7 +4164,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -4197,7 +4197,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -4211,7 +4210,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -4281,7 +4281,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency/{id}",
@@ -4315,7 +4314,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -4433,7 +4433,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency/{id}",
@@ -4480,7 +4479,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -4590,7 +4590,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/dosage-frequency/{id}",
@@ -4637,7 +4636,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -4669,7 +4669,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -4683,7 +4682,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -4790,7 +4790,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/edit-treatment/prepare-update",
@@ -4836,7 +4835,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -4862,7 +4862,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -4876,7 +4875,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -4998,7 +4998,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-medication-regimens/alarms/trials/{trial}/patients/{patient}",
@@ -5046,7 +5045,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -5083,7 +5083,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -5097,7 +5096,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -5166,7 +5166,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-medication-regimens/trials/{trial}/patients/{patient}",
@@ -5198,7 +5197,8 @@
             "integration.request.querystring.msgId" : "method.request.querystring.msgId"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -5235,7 +5235,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -5249,7 +5248,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -5342,7 +5342,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-periods/period_info/trials/{trial}/patients/{patient}",
@@ -5375,7 +5374,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -5412,7 +5412,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -5426,7 +5425,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -5529,7 +5529,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-pill-counts",
@@ -5567,7 +5566,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -5668,7 +5668,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-pill-counts",
@@ -5706,7 +5705,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -5814,7 +5814,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-pill-counts",
@@ -5855,7 +5854,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -5881,7 +5881,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -5895,7 +5894,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -5975,7 +5975,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-pill-counts/trials/{trial}/patients/{patient}",
@@ -6010,7 +6009,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6047,7 +6047,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6061,7 +6060,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -6141,7 +6141,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-regimens-info/trials/{trial}/patients/{patient}",
@@ -6177,7 +6176,8 @@
             "integration.request.querystring.tzid" : "method.request.querystring.tzid"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6214,7 +6214,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6228,7 +6227,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -6348,7 +6348,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-register",
@@ -6395,7 +6394,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6421,7 +6421,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6435,7 +6434,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -6510,7 +6510,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-register/patient-visit/trials/{trial}/patients/{patient_id}",
@@ -6545,7 +6544,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6582,7 +6582,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6596,7 +6595,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -6695,7 +6695,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-register/trials/{trial}",
@@ -6736,7 +6735,8 @@
             "integration.request.querystring.msgId" : "method.request.querystring.msgId"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6768,7 +6768,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6782,7 +6781,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -6886,7 +6886,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-register/trials/{trial}/patients/{patient}",
@@ -6928,7 +6927,8 @@
             "integration.request.querystring.msgId" : "method.request.querystring.msgId"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -6965,7 +6965,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -6979,7 +6978,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -7083,7 +7083,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-visits/trials/{trial}/patients/{patient_id}",
@@ -7120,7 +7119,8 @@
             "integration.request.querystring.startDate" : "method.request.querystring.startDate"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "post" : {
@@ -7243,7 +7243,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-visits/trials/{trial}/patients/{patient_id}",
@@ -7291,7 +7290,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -7353,7 +7353,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -7367,7 +7366,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -7502,7 +7502,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-visits/trials/{trial}/patients/{patient_id}/{patient_visit_id}",
@@ -7552,7 +7551,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -7677,7 +7677,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/patient-visits/trials/{trial}/patients/{patient_id}/{patient_visit_id}",
@@ -7727,7 +7726,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -7794,7 +7794,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -7808,7 +7807,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -7923,7 +7923,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens",
@@ -7969,7 +7968,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -8087,7 +8087,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens",
@@ -8134,7 +8133,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -8160,7 +8160,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -8174,7 +8173,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -8289,7 +8289,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/link-qnn-to-dose",
@@ -8335,7 +8334,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -8361,7 +8361,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -8375,7 +8374,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -8450,7 +8450,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/regimen-details/trial/{trial}/regimen/{id}",
@@ -8485,7 +8484,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -8522,7 +8522,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -8536,7 +8535,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -8621,7 +8621,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/trial/{trial}",
@@ -8658,7 +8657,8 @@
             "integration.request.querystring.include_details" : "method.request.querystring.include_details"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -8768,7 +8768,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/trial/{trial}",
@@ -8815,7 +8814,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -8847,7 +8847,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -8861,7 +8860,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -8941,7 +8941,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/trial/{trial}/regimen/{id}",
@@ -8977,7 +8976,8 @@
             "integration.request.querystring.include_medication_pill" : "method.request.querystring.include_medication_pill"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -9092,7 +9092,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/trial/{trial}/regimen/{id}",
@@ -9140,7 +9139,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -9177,7 +9177,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -9191,7 +9190,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -9303,7 +9303,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/regimens/unlink-qnn-from-dose",
@@ -9349,7 +9348,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -9375,7 +9375,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -9389,7 +9388,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -9504,7 +9504,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence",
@@ -9550,7 +9549,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -9576,7 +9576,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -9590,7 +9589,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -9660,7 +9660,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence/trial/{trial}",
@@ -9694,7 +9693,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -9804,7 +9804,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence/trial/{trial}",
@@ -9851,7 +9850,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -9883,7 +9883,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -9897,7 +9896,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -9967,7 +9967,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence/{id}",
@@ -10001,7 +10000,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -10119,7 +10119,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence/{id}",
@@ -10166,7 +10165,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -10276,7 +10276,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/step-sequence/{id}",
@@ -10323,7 +10322,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -10355,7 +10355,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -10369,7 +10368,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -10484,7 +10484,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps",
@@ -10530,7 +10529,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -10643,7 +10643,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps",
@@ -10689,7 +10688,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -10715,7 +10715,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -10729,7 +10728,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -10834,7 +10834,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/get-all",
@@ -10875,7 +10874,8 @@
             "integration.request.querystring.update_reference" : "method.request.querystring.update_reference"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -10901,7 +10901,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -10915,7 +10914,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -10943,7 +10943,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -10957,7 +10956,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -11021,7 +11021,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/translation-files/{id}",
@@ -11055,7 +11054,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -11087,7 +11087,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -11101,7 +11100,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -11165,7 +11165,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http_proxy",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/translation/{id}",
@@ -11178,7 +11177,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http_proxy"
         }
       },
       "options" : {
@@ -11210,7 +11210,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -11224,7 +11223,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -11303,7 +11303,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http_proxy",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/upload-file/",
@@ -11319,7 +11318,8 @@
             "integration.request.querystring.translation_key" : "method.request.querystring.translation_key"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http_proxy"
         }
       },
       "delete" : {
@@ -11401,7 +11401,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/upload-file/",
@@ -11439,7 +11438,8 @@
             "integration.request.querystring.translation_key" : "method.request.querystring.translation_key"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -11465,7 +11465,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -11479,7 +11478,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -11559,7 +11559,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/{id}",
@@ -11595,7 +11594,8 @@
             "integration.request.querystring.update_reference" : "method.request.querystring.update_reference"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -11705,7 +11705,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/steps/{id}",
@@ -11752,7 +11751,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -11784,7 +11784,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -11798,7 +11797,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -11878,7 +11878,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/number/{trial_id}/{site_uuid}",
@@ -11914,7 +11913,8 @@
             "integration.request.path.site_uuid" : "method.request.path.site_uuid"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -11951,7 +11951,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -11965,7 +11964,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12055,7 +12055,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient",
@@ -12094,7 +12093,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12120,7 +12120,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12134,7 +12133,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12198,7 +12198,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient/enddate",
@@ -12229,7 +12228,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12255,7 +12255,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12269,7 +12268,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12333,7 +12333,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient/endreason",
@@ -12364,7 +12363,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12390,7 +12390,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12404,7 +12403,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12468,7 +12468,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient/lang",
@@ -12499,7 +12498,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12525,7 +12525,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12539,7 +12538,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12603,7 +12603,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient/phone",
@@ -12634,7 +12633,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12660,7 +12660,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12674,7 +12673,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12738,7 +12738,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patient/reminder",
@@ -12769,7 +12768,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12795,7 +12795,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12809,7 +12808,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -12889,7 +12889,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/patients/{trial_id}/{site_uuid}",
@@ -12925,7 +12924,8 @@
             "integration.request.path.site_uuid" : "method.request.path.site_uuid"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -12962,7 +12962,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -12976,7 +12975,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -13057,7 +13057,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/sms",
@@ -13096,7 +13095,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -13158,7 +13158,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/sms",
@@ -13189,7 +13188,8 @@
             }
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -13215,7 +13215,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -13229,7 +13228,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -13299,7 +13299,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/text-only/sms/{trial_id}",
@@ -13333,7 +13332,8 @@
             "integration.request.path.trial_id" : "method.request.path.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -13365,7 +13365,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -13379,7 +13378,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -13494,7 +13494,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens",
@@ -13540,7 +13539,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -13658,7 +13658,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens",
@@ -13705,7 +13704,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -13731,7 +13731,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -13745,7 +13744,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -13820,7 +13820,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens/trial/{trial}",
@@ -13855,7 +13854,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -13965,7 +13965,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens/trial/{trial}",
@@ -14012,7 +14011,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -14044,7 +14044,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -14058,7 +14057,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -14133,7 +14133,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens/trial/{trial}/treatment-regimen/{id}",
@@ -14168,7 +14167,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -14283,7 +14283,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/treatment-regimens/trial/{trial}/treatment-regimen/{id}",
@@ -14331,7 +14330,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -14368,7 +14368,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -14382,7 +14381,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -14497,7 +14497,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods",
@@ -14543,7 +14542,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -14661,7 +14661,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods",
@@ -14708,7 +14707,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -14734,7 +14734,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -14748,7 +14747,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -14818,7 +14818,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods/trial/{trial}",
@@ -14852,7 +14851,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -14884,7 +14884,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -14898,7 +14897,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -14973,7 +14973,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods/trial/{trial}/name/{name}",
@@ -15008,7 +15007,8 @@
             "integration.request.path.name" : "method.request.path.name"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -15045,7 +15045,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -15059,7 +15058,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -15134,7 +15134,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods/trial/{trial}/period-index/{period_index}",
@@ -15169,7 +15168,8 @@
             "integration.request.path.trial" : "method.request.path.trial"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -15206,7 +15206,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -15220,7 +15219,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -15337,7 +15337,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods/trial/{trial}/trial-period/{id}",
@@ -15385,7 +15384,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -15422,7 +15422,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -15436,7 +15435,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -15506,7 +15506,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-periods/{id}",
@@ -15540,7 +15539,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -15572,7 +15572,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -15586,7 +15585,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -15706,7 +15706,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-visits",
@@ -15752,7 +15751,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "put" : {
@@ -15870,7 +15870,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "PUT",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-visits",
@@ -15917,7 +15916,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -15943,7 +15943,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -15957,7 +15956,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -16027,7 +16027,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-visits/trial/{trial_id}",
@@ -16061,7 +16060,8 @@
             "integration.request.path.trial_id" : "method.request.path.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -16093,7 +16093,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -16107,7 +16106,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -16177,7 +16177,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-visits/{id}",
@@ -16211,7 +16210,8 @@
             "integration.request.path.id" : "method.request.path.id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "delete" : {
@@ -16318,7 +16318,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8094/patient_schedule_service/v0/trial-visits/{id}",
@@ -16365,7 +16364,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -16397,7 +16397,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -16411,7 +16410,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -16505,7 +16505,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "DELETE",
           "uri" : "http://dev-microservices.aicure.io:8082/schedule-service/v0/protocol_params/trial/{trial}/user/{user}",
@@ -16545,7 +16544,8 @@
             "integration.request.header.trial_id" : "method.request.header.trial_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -16582,7 +16582,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -16596,7 +16595,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -16676,7 +16676,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8082/schedule-service/v0/questionnaires/infos/trials/{trial}",
@@ -16711,7 +16710,8 @@
             "integration.request.querystring.msg_id" : "method.request.querystring.msg_id"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "options" : {
@@ -16777,7 +16777,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "200" : {
               "statusCode" : "200",
@@ -16807,7 +16806,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -16882,7 +16882,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "connectionId" : "19wtbd",
           "httpMethod" : "GET",
           "uri" : "http://dev-microservices.aicure.io:8084/trial-config-service/v0/trial_configs/config-file/{client}",
@@ -16917,7 +16916,8 @@
             "integration.request.querystring.platform" : "method.request.querystring.platform"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http"
         }
       },
       "post" : {
@@ -16990,7 +16990,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http_proxy",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8084/trial-config-service/v0/trial_configs/config-file/{client}",
@@ -17004,7 +17003,8 @@
             "integration.request.querystring.platform" : "method.request.querystring.platform"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http_proxy"
         }
       },
       "options" : {
@@ -17036,7 +17036,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -17050,7 +17049,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     },
@@ -17125,7 +17125,6 @@
           "aicure_service_beta" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http_proxy",
           "connectionId" : "19wtbd",
           "httpMethod" : "POST",
           "uri" : "http://dev-microservices.aicure.io:8084/trial-config-service/v0/trial_configs/model-file/{client}",
@@ -17139,7 +17138,8 @@
             "integration.request.querystring.platform" : "method.request.querystring.platform"
           },
           "passthroughBehavior" : "when_no_match",
-          "connectionType" : "VPC_LINK"
+          "connectionType" : "VPC_LINK",
+          "type" : "http_proxy"
         }
       },
       "options" : {
@@ -17171,7 +17171,6 @@
           }
         },
         "x-amazon-apigateway-integration" : {
-          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -17185,7 +17184,8 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "mock"
         }
       }
     }
@@ -17197,8 +17197,8 @@
       "in" : "header",
       "x-amazon-apigateway-authtype" : "cognito_user_pools",
       "x-amazon-apigateway-authorizer" : {
-        "type" : "cognito_user_pools",
-        "providerARNs" : [ "arn:aws:cognito-idp:us-west-2:272510231547:userpool/us-west-2_n8G882L1V" ]
+        "providerARNs" : [ "arn:aws:cognito-idp:us-west-2:272510231547:userpool/us-west-2_n8G882L1V" ],
+        "type" : "cognito_user_pools"
       }
     }
   },
@@ -19811,14 +19811,7 @@
     }
   },
   "x-amazon-apigateway-gateway-responses" : {
-    "DEFAULT_5XX" : {
-      "responseParameters" : {
-        "gatewayresponse.header.Access-Control-Allow-Methods" : "'GET,OPTIONS'",
-        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
-        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'"
-      }
-    },
-    "MISSING_AUTHENTICATION_TOKEN" : {
+    "ACCESS_DENIED" : {
       "responseParameters" : {
         "gatewayresponse.header.Access-Control-Allow-Methods" : "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'",
         "gatewayresponse.header.Strict-Transport-Security" : "'max-age=31536000; includeSubDomains'",
@@ -19826,7 +19819,7 @@
         "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,user,user-roles,authentication'"
       }
     },
-    "ACCESS_DENIED" : {
+    "MISSING_AUTHENTICATION_TOKEN" : {
       "responseParameters" : {
         "gatewayresponse.header.Access-Control-Allow-Methods" : "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'",
         "gatewayresponse.header.Strict-Transport-Security" : "'max-age=31536000; includeSubDomains'",
@@ -19847,6 +19840,13 @@
         "gatewayresponse.header.Strict-Transport-Security" : "'max-age=31536000; includeSubDomains'",
         "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'",
         "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,user,user-roles,authentication'"
+      }
+    },
+    "DEFAULT_5XX" : {
+      "responseParameters" : {
+        "gatewayresponse.header.Access-Control-Allow-Methods" : "'GET,OPTIONS'",
+        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'"
       }
     }
   },
